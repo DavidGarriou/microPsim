@@ -1,8 +1,8 @@
-type registre == int;;
+type registre = int
 
 type operande =
   Reg of registre
-  | Imm if int;;
+  | Imm of int
 
 type instruction =
   Op of operande * registre * operande * registre
@@ -14,9 +14,9 @@ type instruction =
 and operation =
   Load | Store | Add | Mult | Sub | Div
   | And | Or | Xor | Shl | Shr
-  | Slt | Sle | Seq;;
+  | Slt | Sle | Seq
 
-value nombre_de_registres: int
-  and sp: int
-  and ra: int
-  taille_du_mot: int;;
+val nombre_de_registres: int
+val sp: int
+val ra: int
+val taille_du_mot: int
