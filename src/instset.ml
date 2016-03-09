@@ -5,7 +5,7 @@ type operande =
   | Imm of int
 
 type instruction =
-  Op of operande * registre * operande * registre
+  Op of operation * registre * operande * registre
   | Jmp of operande * registre
   | Braz of registre * int
   | Branz of registre * int

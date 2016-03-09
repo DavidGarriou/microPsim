@@ -1,11 +1,11 @@
-#open "instset";;
+open Instset;;
 
 exception Erreur of string * int;;
 
-value lire_memoire : int -> int;;
-value ecrire_memoire : int -> int -> unit;;
-value lire_registre : int -> int;;
-value ecrire_registre : int -> int -> unit;;
-value tab_syscalls : (int -> int) vect;;
+val lire_memoire : int -> int;;
+val ecrire_memoire : int -> int -> unit;;
+val lire_registre : int -> int;;
+val ecrire_registre : int -> int -> unit;;
+val tab_syscalls : (int -> int) array;;
 
-value execute : instruction vect -> int -> unit;;
+val execute_programme : instruction array -> int -> unit;;
