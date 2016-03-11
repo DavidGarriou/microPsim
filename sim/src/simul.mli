@@ -1,6 +1,6 @@
 open Instset;;
 
-exception Erreur of string;;
+exception Erreur of string * int;;
 
 val lire_memoire : int -> int;;
 val ecrire_memoire : int -> int -> unit;;
