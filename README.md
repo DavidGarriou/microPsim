@@ -11,13 +11,15 @@ Ce livre est dorénavant disponible sous la licence [Creative Commons BY-NC-SA]
 [Le langage Caml]: http://caml.inria.fr/distrib/books/llc.pdf
 [Creative Commons BY-NC-SA]: http://creativecommons.org/licenses/by-nc-sa/2.0/fr/legalcode
 
-Le projet consiste d'abord à adapter les exemples du livre vers Ocaml.
+Le projet a tout d'abord consisté à adapter les exemples du livre vers Ocaml.
+Maintenant on implémente un autre jeu d'instruction qui nous permettra de simuler l'exécution sans et avec un pipeline, 
+de faire des appels de fonction.
 
 Le projet n'est pas encore fonctionnel.
 
 ## Todo
 
-* Réaliser le parser : travail en cours avec la librairie "menhir"
+* Réaliser le parser : travail en cours avec la librairie "menhir". Il manque la fonction d'écriture.
 * Terminer l'assembleur
 * Tester le simulateur sur plusieurs exemples sans appel système
 * Ajouter les appels systèmes au simulateur
@@ -44,7 +46,20 @@ Dans sim/src:
 ## Assembleur
 
 L'assembleur n'est pas fonctionnel.
-Il manque le parser.
 
 ## Parser
+
+Dans parser/src/mips:
+
+C'est un parser pour un jeu d'instruction mips simplifié. La specification du jeu d'instruction sera mise en ligne un peu plus tard.
+Le parser analyse tout le jeu d'instruction, mais ne fait qu'afficher certaines instructions pour l'exemple.
+Pour le compiler et l'exécuter:
+```
+./build_mips_parser.sh
+./build_test.sh
+```
+
+La fonction d'écriture génèrera du binaire qui sera ensuite consommé par le simulateur.
+Je souhaite que le projet soit modulaire.
+
 
