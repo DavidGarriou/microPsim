@@ -1,11 +1,6 @@
-1
-true
-false
-null
-[1, 2, 3., 4.0, .5, 5.5e5, 6.3]
-"Hello World"
-{ "field1": "Hello",
-  "field2": 17e13,
-  "field3": [1, 2, 3],
-  "field4": { "fieldA": 1, "fieldB": "Hello" }
-}
+lih r1,#007
+sub r1, r2, r5
+addi r6,r1, 9
+addi. r2,r7, #87
+ldx r0, (r2+r5)
+bl
